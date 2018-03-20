@@ -1,0 +1,137 @@
+.pro_header {
+  height: 45px;
+  width: 100%;
+  background: rgba(250, 250, 250, 0.9);
+  position: fixed;
+  top: 0;
+  max-width: 750px;
+  z-index: 999;
+  /* display: flex; */
+  text-align: center;
+}
+.pro_header span {
+  position: absolute;
+  left: 10px;
+}
+.pro_header h4 {
+  /* width: 100%; */
+  height: 45px;
+  font-weight: 400;
+  color: black;
+  text-align: center;
+  line-height: 45px;
+  margin: 0;
+  display: inline-block;
+  margin: 0px 10px;
+}
+.pro_header .now {
+  border-bottom: 1px solid red;
+}
+.pro_content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #fff;
+}
+.pro_content h4 {
+  font-family: PingFangSC-Regular;
+  font-size: 17px;
+  color: #000000;
+  letter-spacing: 0.2px;
+}
+.pro_content p {
+  color: #222222;
+}
+.pro_content .pro_parma {
+  padding: 0px 10px;
+}
+.pro_content .pro_none {
+  width: 100%;
+  height: 15px;
+  background-color: #eee;
+}
+.pro_content .pro_type {
+  padding: 10px 10px 0px 10px;
+}
+.pro_content .pro_type .type_top {
+  display: flex;
+  justify-content: space-between;
+}
+.pro_content .pro_type .pro_sever {
+  display: flex;
+  justify-content: space-between;
+}
+.pro_content .pro_type .pro_sever span {
+  margin-top: 10px;
+}
+.layer {
+  padding: 10px;
+}
+.layer .pro_color p {
+  word-break: break-all;
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 3px 5px;
+  color: black;
+}
+.layer .pro_color .now {
+  border: 1px solid red;
+}
+.layer span {
+  border: 1px solid #ccc;
+  padding: 3px 5px;
+  color: black;
+}
+.layer .now {
+  border: 1px solid red;
+}
+.car_button {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 25px;
+  background: red;
+}
+.mui-numbox-btn-plus {
+  border-left: 1px solid #ccc!important;
+}
+.pro_footer {
+  height: 55px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  max-width: 750px;
+  z-index: 999;
+  display: flex;
+}
+.pro_footer div {
+  display: inline-block;
+  width: 16%;
+  text-align: center;
+  padding-top: 10px;
+}
+.pro_footer a {
+  color: black;
+}
+.pro_footer p {
+  color: black;
+  margin-bottom: 0;
+  font-size: 12px;
+}
+.pro_footer .now {
+  color: red;
+}
+.pro_footer button {
+  width: 26%;
+}
+.pro_footer .pro_button {
+  color: white;
+  background: black;
+}
+.product_new {
+  width: 100%;
+}
+.product_new .new_img {
+  width: 100%;
+  text-align: center;
+}

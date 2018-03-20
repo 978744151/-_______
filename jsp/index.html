@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/marge.css">
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h4></h4>
+    </div>
+    <div class="Incontent">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="lt_search">
+                    <i class='mui-icon mui-icon-search'></i>
+                    <input type="text" class="search_text" placeholder="请输入搜索关键字">
+                </div>
+                <!--轮播图-->
+                <div class="index_banner">
+                        <!--挖个坑-->
+                </div>
+                <!--导航-->
+                <div class="navgate">
+                    <!--挖个坑-->
+                </div>
+                <!--<div class="list">-->
+                    <!--<a>-->
+                        <!--<img src="../images/brand1.png" alt="">-->
+                        <!--<span>XX</span>-->
+                    <!--</a>-->
+                    <!--<a>-->
+                        <!--<img src="../images/brand2.png" alt="">-->
+                        <!--<span>XX</span>-->
+                    <!--</a>-->
+                    <!--<a>-->
+                        <!--<img src="../images/brand3.png" alt="">-->
+                        <!--<span>XX</span>-->
+                    <!--</a>-->
+                    <!--<a>-->
+                        <!--<img src="../images/brand4.png" alt="">-->
+                        <!--<span>XX</span>-->
+                    <!--</a>-->
+                    <!--<a>-->
+                        <!--<img src="../images/brand5.png" alt="">-->
+                        <!--<span>XX</span>-->
+                    <!--</a>-->
+                <!--</div>-->
+
+                <!--产品列表页-->
+                <div class="goods-list">
+                    <!--<a>-->
+                        <!--<img src="../images/brand1.png" alt="">-->
+                        <!--<span>{{v.categoryname}}</span>-->
+                    <!--</a>-->
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="lt_footer">
+        <ul>
+            <li class="now">
+                <a href="index.html">
+                    <span class="fa fa-home"></span>
+                    <p>首页</p>
+                </a>
+            </li>
+            <li>
+                <a href="category.html">
+                    <span class="fa fa-bars"></span>
+                    <p>分类</p>
+                </a>
+            </li>
+            <li>
+                <a href="cart.html">
+                    <span class="fa fa-shopping-cart"></span>
+                    <p>购物车</p>
+                </a>
+            </li>
+            <li>
+                <a href="user.html">
+                    <span class="mui-icon mui-icon-weixin"></span>
+                    <p>会员中心</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<script type=text/html id="tpl">
+    <div class="mui-slider">
+        <div class="mui-slider-group mui-slider-loop banner_img">
+            <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{result.Banner[result.Banner.length-1].commoditycarousel}}"/></a></div>
+            {{each result.Banner v i}}
+            <div class="mui-slider-item"><a href="#"><img src="{{v.commoditycarousel}}" /></a></div>
+            {{/each}}
+            <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{result.Banner[0].commoditycarousel}}"/></a></div>
+        </div>
+        <div class="mui-slider-indicator">
+            {{each result.Banner v i}}
+            <div class="mui-indicator {{i===0?'mui-active':''}}"></div>
+            {{/each}}
+        </div>
+    </div>
+</script>
+<script type="text/html" id="tpl2">
+    {{each result.goods v i}}
+    <div class="goods-item" data-id='{{v.barcode}}'>
+        <div class='items_img'>
+            <img src="{{v.commoditypic}}" alt="">
+        </div>
+        <div class="info">
+            <p class="price">{{v.commodityname}}</p>
+            <p class="sale">
+                    <span>价格{{v.buyprice}}</span>
+                    <span>销量{{v.stock_quantity}}件</span>
+            </p>
+        </div>
+    </div>
+    {{/each}}
+</script>
+<script src="../lib/zepto/zepto.min.js"></script>
+<script src="../js/fastclick.js"></script>
+<script src="../lib/mui/js/mui.min.js"></script>
+<script src="../lib/artTemplate/template-web.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/index.js"></script>
+<script>
+    $('.search_text').on('focus', function () {
+        location.href = 'search.html'
+    })
+</script>
+</body>
+</html>
